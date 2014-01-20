@@ -1,0 +1,64 @@
+<!--#include virtual="includes/header.html" -->
+    <div class="main">
+        <div class="aligner body_aligner">
+			<div class="profile_wrap">
+				<div class="profile_main clearfix">
+					<div class="student_profile_image">
+						<img src="images/toremove/student.png">
+					</div>
+					<ul class="student_details_list clearfix">
+						<li class="name"><label>Name</label><p title="Abhishek Kumar">Abhishek Kumar</p></li>
+						<li class="class"><label>Class</label><p>6B</p></li>
+						<li class="roll_no"><label>Roll No.</label><p>4</p></li>
+						<li class="dob"><label>Date of Birth</label><p>1 Jan 1999</p></li>
+						<li class="enroll"><label>Enrollment</label><p>254364556</p></li>
+						<li class="gender"><label>Gender</label><p>Male</p></li>
+					</ul>
+				</div>
+				<div class="js-menu_open_hide">
+					<div class="parent_info_wrap clearfix">
+						<ul class="parent_info clearfix">
+							<li class="name"><label>Mother&rsquo;s Name</label><p title="Suman Mishra">Suman Mishra</p></li>
+							<li class="ocuppation"><label>Occupation</label><p>Teacher</p></li>
+							<li class="contact"><label>Mother&rsquo;s Contact Number</label><p>1234567890</p></li>
+						</ul>
+						<ul class="parent_info clearfix">
+							<li class="name"><label>Father&rsquo;s Name</label><p title="Rajesh Mishra">Rajesh Mishra</p></li>
+							<li class="ocuppation"><label>Occupation</label><p>Bussiness</p></li>
+							<li class="contact"><label>Father&rsquo;s Contact Number</label><p>1234567890</p></li>
+						</ul>
+						<ul class="parent_info address_info clearfix">
+							<li class="name"><label>Address</label><p>172<br>vill. Sukhrali<br>Gurgaon 122001<br>Haryana</p></li>
+						</ul>
+					</div>
+					<div class="time_table_wrap">
+						<div class="time_table_head clearfix">
+							<p>Time Table</p>
+							<p>Class Teacher &raquo; <span title="Neeraj Kumar">Neeraj Kumar</span></p>
+						</div>
+						<div class="time_table"></div>
+					</div>
+				</div>
+			</div>
+			<!--#include virtual="includes/menu.html" -->
+			<div class="menu_items_content_wrap js-menu_items_content_wrap">
+				<div id="attendance" class="menu_items_content first">
+					Attendance
+				<!--#include virtual="includes/attendance.html" -->
+				</div>
+				<div id="results" class="menu_items_content">
+					<!--#include virtual="includes/results.html" -->
+				</div>
+				<div id="fees" class="menu_items_content">
+					<!--#include virtual="includes/fees.html" -->
+				</div>
+				<div id="events" class="menu_items_content">
+					<!--#include virtual="includes/events.html" -->
+				</div>
+				<div id="livefeed" class="menu_items_content">
+					<!--#include virtual="includes/livefeed.html" -->
+				</div>
+			</div>
+		</div>
+    </div>
+<!--#include virtual="includes/footer.html" -->

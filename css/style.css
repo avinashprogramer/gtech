@@ -1,0 +1,541 @@
+* { margin:0; padding:0; }
+html { background:#8B8888; }
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { display:block; }
+a { border:none; color:#D87512; outline:none; text-decoration:none; } a:hover { color:#F7941E; }
+img { border:none; }
+ul, ol, li { list-style-type: none; }
+input, select { outline:none; }
+input::-moz-focus-inner{border:none;}
+input::-webkit-focus-inner{border:none;}
+input::-o-focus-inner{border:none;}
+textarea { resize:none; outline:none; }
+.clear { clear:both; }
+.clearfix:after {clear:both;content:".";display:block;height:0;visibility:hidden;}
+.clearfix {display:inline-block;}
+* html .clearfix {height:1%;}
+.clearfix {display:block;}
+.wf100 { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight: 100; }
+.wf300 { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight: 300; }
+.wf300i { font-family: 'Josefin Sans', sans-serif; font-style: italic; font-weight: 300; }
+.wf500 { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight: 500; }
+.wf700 { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight: 700; }
+strong, b, h1, h2, h3, h4, h5, h6 { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight: 500; }
+em, i { font-family: 'Josefin Sans', sans-serif; font-style: italic; font-weight: 300; }
+
+body { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight: 300; font-size:15px; line-height: 19px; color:#000000; }
+.aligner { width:940px; margin:0 auto; padding:0px;}
+.global { width:100%; background:#fff; }
+.header {
+    background: #8B8888;
+}
+.footer {
+    background: #8B8888;
+}
+.footer_aligner {
+    text-align: center;
+}
+.footer_sponser {
+    display: inline-block;
+    color: #000000;
+    font: 300 normal 12px/18px 'Josefin Sans', sans-serif;
+}
+.index_list > li {
+    display: block;
+}
+.index_list > li > a {
+    display: inline-block;
+}
+.body_aligner {
+    background: #E5E5E5;
+    min-height: 500px;
+}
+.college_logo_name {
+    float: left;
+    padding: 10px 0px;
+}
+.college_logo_name > img {
+    float: left;
+    display: block;
+    width: 26px;
+    height: 26px;
+    padding-right: 10px;
+}
+.college_logo_name > h4 {
+    color: #000000;
+    font: 300 normal 20px/26px 'Josefin Sans', sans-serif;
+    float: left;
+}
+.header_sponser_name {
+    float: right;
+    min-width: 200px;
+}
+.header_sponser_name > h4 {
+    color: #000000;
+    font: 300 normal 20px/26px 'Josefin Sans', sans-serif;
+    text-align: left;
+    padding-top: 10px;
+}
+.header_sponser_name > h4 > span {
+    font-size: 10px;
+    line-height: 16px;
+}
+
+/* main menu starts */
+.main_menu_wrap {
+    border-top: 1px solid #757475;
+    background: #32ACE9;
+    box-shadow: 0 14px 5px -15px #000000 inset;
+    -moz-box-shadow: 0 14px 5px -15px #000000 inset;
+    -webkit-box-shadow: 0 14px 5px -15px #000000 inset;
+    position: relative;
+    text-align: center;
+    height: 70px;
+}
+.main_menu_wrap > a.menu_toggle {
+    background: url('../images/menu_toggle_img.png') no-repeat 0px -6px transparent;
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    margin-left: -72px;
+    z-index: 2;
+    width: 145px;
+    height: 33px;
+}
+.main_menu_wrap.open > a.menu_toggle {
+    background-position: 0px -118px;
+}
+
+.main_menu {
+    padding: 30px 0 0;
+    display: inline-block;
+}
+.main_menu > li {
+    float: left;
+    padding: 0px 20px;
+    width: 120px;
+    text-align: center;
+    position: relative;
+}
+.main_menu > li > a {
+    color: #F4F4F4;
+    font: 300 normal 18px/24px 'Josefin Sans', sans-serif;
+    display: inline-block;
+}
+.open .main_menu > li.active > span {
+    border-color: transparent transparent #E5E5E5;
+    border-style: solid;
+    border-width: 0 5px 10px;
+    bottom: -16px;
+    left: 50%;
+    margin-left: -5px;
+    position: absolute;
+}
+/* main menu Ends */
+.profile_wrap {
+    padding: 0px 60px;
+}
+.profile_main {
+    padding: 40px 0px;
+}
+.student_profile_image {
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+.student_profile_image > img {
+    width: 150px;
+    height: 150px;
+    display: block;
+}
+.student_details_list {
+    width: 600px;
+    float: left;
+}
+.student_details_list > li {
+    float: left;
+    padding-left: 40px;
+    min-width: 40px;
+}
+.student_details_list > li.name, .student_details_list > li.enroll {
+    width: 200px;
+}
+.student_details_list > li.dob {
+    width: 100px;
+}
+.student_details_list > li.gender {
+    width: 70px;
+}
+.student_details_list > li.class, .student_details_list > li.roll_no {
+    text-align: center;
+}
+.student_details_list > li > label, .parent_info > li > label {
+    color: #808080;
+    font: 300 normal 18px/22px 'Josefin Sans', sans-serif;
+    display: block;
+    padding: 14px 0px 5px 0px;
+    text-align: left;
+}
+.student_details_list > li > p, .parent_info > li > p {
+    background: #DFDFDF;
+    color: #000000;
+    font: 700 normal 18px/34px 'Josefin Sans', sans-serif;
+    display: block;
+    padding: 0px 10px;
+    text-align: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.parent_info_wrap {
+    padding: 40px 0px;
+    border-top: 1px solid #989898;
+    border-bottom: 1px solid #989898;
+}
+.parent_info {
+    float: left;
+    padding-right: 110px;
+    width: 200px;
+}
+.parent_info > li {
+    padding-bottom: 10px;
+}
+.address_info {
+    padding-right: 0px;
+}
+.address_info > li > p {
+    height: 200px;
+    line-height: 24px;
+    padding-top: 10px;
+}
+.time_table_wrap {
+    padding: 20px 0 50px;
+}
+.time_table_head {
+    padding: 0 0 10px;
+}
+.time_table_head > p {
+    color: #000000;
+    font: 700 normal 18px/24px 'Josefin Sans', sans-serif;
+    width: 49%;
+    float: left;
+}
+.time_table_head > p > span {
+    color: #000000;
+    font: 500 normal 18px/18px 'Josefin Sans', sans-serif;
+    padding-left: 10px;
+    text-align: left;
+    display: inline-block;
+    max-width: 270px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.time_table {
+    min-height: 250px;
+    background: #8D8789;
+}
+.menu_items_content_wrap {
+    display: none;
+    padding: 40px 60px;
+}
+.menu_items_content {
+    min-height: 600px;  /*to remove on deployment*/
+    display: none;
+}
+.menu_items_content.first {
+    display: block;
+}
+/* Events start */
+.events_list_head {
+    background: #EC9D2B;
+    padding: 10px 0px;
+}
+.events_list_head > p, .events_list > li > p {
+    width: 48%;
+    float: left;
+    color: #000000;
+    font: 700 normal 18px/24px 'Josefin Sans', sans-serif;
+}
+.events_list_head > p.first, .events_list > li > p.first {
+    padding-right: 4%;
+    text-align: right;
+}
+.events_list {
+    padding-top: 10px;
+    padding-bottom: 50px;
+    min-height: 400px;
+}
+.events_list > li {
+    padding-bottom: 10px;
+    width: 100%;
+    float: left;
+}
+.events_list > li > p {
+    font-weight: 300;
+}
+/* Events ends */
+
+/* Live feed start */
+.livefeed_wrap {
+    padding: 20px 0px 50px;
+}
+.live_video_wrap {
+    background: url('../images/livevideo_placeholder.png') no-repeat center center transparent;
+    height: 461px;
+    width: 820px;
+}
+.live_video_wrap > .live_video_iframe {
+    height: 461px;
+    width: 820px;
+    cursor: pointer; 
+}
+.livefeed_wrap > p {
+    color: #000000;
+    font: 700 normal 18px/24px 'Josefin Sans', sans-serif;
+    padding-top: 10px;
+}
+.video_lecture_wrap {
+    padding-bottom: 60px;
+    width: 100%;
+}
+.video_lecture_wrap > li {
+    color: #000000;
+    font: 500 normal 18px/24px 'Josefin Sans', sans-serif;
+    float: left;
+    width: 12.50%;
+    background: #7AA2F3;
+    text-align: center;
+    position: relative;
+}
+.video_lecture_wrap.six_lectures > li {
+    width: 16.6667%;
+}
+.video_lecture_wrap.seven_lectures > li {
+    width: 14.2857%;
+}
+.video_lecture_wrap > li.even {
+    background: #9758F3;
+}
+.video_lecture_wrap > li > i {
+    border-color: transparent;
+    border-style: solid;
+    border-width: 0 5px 10px;
+    bottom: -11px;
+    left: 50%;
+    margin-left: -5px;
+    position: absolute;
+}
+.video_lecture_wrap > li > span {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: -28px;
+    left: 0px;
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+.video_lecture_wrap > li > strong {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: -35px;
+    left: 0px;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    font-weight: 700;
+}
+.video_lecture_wrap > li.active > i {
+    border-bottom-color: #3BA7F1;
+}
+.video_lecture_wrap > li.active > span, .video_lecture_wrap > li.active > strong {
+    opacity: 1;
+    filter:alpha(opacity=100);
+}
+/* Live feed ends */
+/* Fees start */
+.fees_wrap {
+    padding: 0px;
+}
+.fees_wrap > h6 {
+    color: #000000;
+    font: 700 normal 18px/24px 'Josefin Sans', sans-serif;
+    padding-bottom: 5px;
+}
+.fees_wrap > h6 > span, .fees_wrap > h6 > strong {
+    font-weight: 700;
+}
+.fees_wrap > h6 > strong, .fee_details > .paid_fee_info {
+    float: left;
+    width: 590px;
+}
+.fees_wrap > h6 > span, .fee_details > .dues_fee_info {
+    float: left;
+    width: 230px;
+}
+.fee_details {
+    background: url('../images/fees_detail_bk.png') repeat-y 0px 0px transparent;
+}
+.paid_fee_info {
+    padding: 40px 0px;
+}
+.dues_fee_info {
+    padding-bottom: 30px;
+}
+.paid_fee_info > p, .dues_fee_info > li {
+    width: 100%;
+    float: left;
+    padding: 15px 0px 0px;
+}
+.paid_fee_info > p > strong {
+    float: left;
+    width: 28.5%;
+    padding: 0px 2%;
+    word-wrap: break-word;
+}
+.paid_fee_info > p > span {
+    float: left;
+    width: 61.5%;
+    padding: 0px 2%;
+    word-wrap: break-word;
+}
+.dues_fee_info > li > strong {
+    float: left;
+    width: 61%;
+    padding: 0px 2% 0px 5%;
+    word-wrap: break-word;
+}
+.dues_fee_info > li > span {
+    float: left;
+    width: 25%;
+    padding: 0px 2% 0px 5%;
+    word-wrap: break-word;
+}
+/* Fees ends */
+/* results starts */
+.test_exam_wrap {
+    padding: 0px;
+}
+.test_exam_wrap > h5 {
+    color: #000000;
+    font: 700 normal 18px/24px 'Josefin Sans', sans-serif;
+    padding-bottom: 20px;
+}
+.test_exam {
+    background: #D5D5D5;
+}
+.test_series_tabs_list {
+    background: #EC9D2B;
+    padding: 15px 0px 0px 0px;
+    float: left;
+    width: 230px;
+}
+.test_series_tabs_list > li {
+    text-align: center;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    position: relative;
+}
+.test_series_tabs_list > li.last {
+    margin-top: 100px;
+}
+.test_series_tabs_list > li > a {
+    display: block;
+    padding: 10px 0px;
+    text-align: center;
+    color: #000000;
+    font: 500 normal 18px/24px 'Josefin Sans', sans-serif;
+}
+.test_series_tabs_list > li > a:hover, .test_series_tabs_list > li.active > a {
+    background: #F6B157;
+}
+.test_series_tabs_list > li.active > span {
+    border-color: transparent #DFDFDF transparent transparent;
+    border-style: solid;
+    border-width: 5px 10px 5px 0px;
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    right: 0px;
+}
+.subject_marks_Remarks_wrap {
+    display: none;
+    float: right;
+    width: 590px;
+}
+.subject_marks_Remarks_wrap.show {
+    display: block;
+}
+.subject_marks_Remarks_wrap > h6 {
+    color: #000000;
+    font: 700 normal 18px/24px 'Josefin Sans', sans-serif;
+    padding: 10px 10px 0px;
+    text-align: right;
+    height: 24px;
+    min-width: 300px;
+}
+.subject_marks_list {
+    float: left;
+    width: 300px;
+    padding-bottom: 100px;
+    margin-top: -9px;
+    background: #DFDFDF;
+}
+.subject_marks_list > li {
+    padding: 10px 0px 10px 10%;
+    width: 90%;
+    float: left;
+    text-align: center;
+    color: #000000;
+    font: 300 normal 18px/24px 'Josefin Sans', sans-serif;
+}
+.subject_marks_list > li.first {
+    background: #D5D5D5;
+    padding-top: 0px;
+}
+
+.subject_marks_list > li > strong, .subject_marks_list > li > span {
+    float: left;
+    width: 50%;
+}
+.date_remark_wrap {
+    float: left;
+    width: 260px;
+    padding-left: 30px
+}
+.date_remark_wrap > h6 {
+    color: #000000;
+    font: 300 normal 18px/24px 'Josefin Sans', sans-serif;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 5px 0px;
+}
+.date_remark_wrap > p{
+    color: #000000;
+    font: 300 normal 18px/28px 'Josefin Sans', sans-serif;
+    word-wrap: break-word;
+    padding: 25px 0 5px;
+}
+.last_next_date {
+    padding: 0px 0px 0px 50px;
+}
+.last_next_date > li {
+    padding: 30px 0px;
+}
+.last_next_date > li > lable {
+    color: #000000;
+    font: 300 normal 18px/24px 'Josefin Sans', sans-serif;
+    word-wrap: break-word;
+}
+.last_next_date > li > p {
+    color: #000000;
+    font: 500 normal 24px/30px 'Josefin Sans', sans-serif;
+    word-wrap: break-word;
+}
+.performance_graph_wrap {
+    padding: 0px;
+}
+.performance_graph_wrap > img {
+    display: block;
+}
+/* results Ends */

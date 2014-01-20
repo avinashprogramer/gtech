@@ -1,0 +1,9 @@
+<!--#include virtual="includes/header.html" -->
+        <div class="main">
+            <div class="aligner body_aligner">
+                <ul class="index_list">
+                	<li><a href="home.shtml">1) Home page</a></li>
+                </ul>
+            </div>
+        </div>
+<!--#include virtual="includes/footer.html" -->
