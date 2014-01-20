@@ -38,10 +38,57 @@ $(document).ready(function() {
 		$(this).closest('li').addClass('active');
 		$('.subject_marks_Remarks_wrap').hide();
 		$(to_show).show();
+		if ( to_show == '#summary_graph') {
+			performance_chart();
+		}
 		return false;
 	});
-
 });
+	
+/*highcharts starts*/
+function performance_chart(){
+	$('#performance_graph').highcharts({
+	    title: {
+	        text: 'Student Progress Graph',
+	        x: -20 //center
+	    },
+	    subtitle: {
+	        text: 'Source: G.Tech. pvt. ltd.',
+	        x: -20
+	    },
+	    xAxis: {
+	        categories: ['Apr-13', 'May-13', 'Jun-13','Jul-13', 'Aug-13', 'Sep-13', 'Oct-13', 'Nov-13', 'Dec-13', 'Jan-14', 'Feb-14', 'Mar-14']
+	    },
+	    yAxis: {
+	        title: {
+	            text: 'precentage / rank in class'
+	        },
+	        plotLines: [{
+	            value: 0,
+	            width: 1,
+	            color: '#808080'
+	        }]
+	    },
+	    tooltip: {
+	        valueSuffix: '%'
+	    },
+	    legend: {
+	        layout: 'vertical',
+	        align: 'right',
+	        verticalAlign: 'middle',
+	        borderWidth: 2
+	    },
+	    series: [{
+	        name: 'percentage',
+	        data: [7.0, 6.9, 9.5, 14.5, 99.8, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+	    }, {
+	        name: 'Rank',
+	        data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+	    }]
+	});
+}
+/*hicharts ends*/
+
 
 $(document).on('click', 'selector', function(){
     

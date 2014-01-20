@@ -43,8 +43,7 @@
 			<!--#include virtual="includes/menu.html" -->
 			<div class="menu_items_content_wrap js-menu_items_content_wrap">
 				<div id="attendance" class="menu_items_content first">
-					Attendance
-				<!--#include virtual="includes/attendance.html" -->
+					<!--#include virtual="includes/attendance.html" -->
 				</div>
 				<div id="results" class="menu_items_content">
 					<!--#include virtual="includes/results.html" -->

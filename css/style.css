@@ -539,3 +539,44 @@ body { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight:
     display: block;
 }
 /* results Ends */
+/* attendance starts */
+.leave_reason_wrap {
+    padding: 20px 0px 0px;
+}
+.leave_reason_wrap > h5 {
+    color: #000000;
+    font: 700 normal 18px/24px 'Josefin Sans', sans-serif;
+    padding-bottom: 15px;
+}
+.reason_date_wrap {
+    padding: 10px;
+    background: #8D8789;
+}
+.reason_date_wrap > h6 {
+    color: #000000;
+    font: 500 normal 18px/24px 'Josefin Sans', sans-serif;
+}
+.reason_date_wrap > label {
+    padding-top: 10px;
+    display: block;
+}
+.reason_date_wrap > label > span {
+    color: #000000;
+    font: 300 normal 18px/24px 'Josefin Sans', sans-serif;
+}
+.reason_date_wrap > label > p {
+    color: #000000;
+    font: 300 normal 18px/20px 'Josefin Sans', sans-serif;
+    min-height: 50px;
+    padding: 10px 10px 25px;
+    background: #ACACAC;
+    word-wrap: break-word;
+}
+.reason_date_wrap > label > p > i {
+    display: block;
+    padding-bottom: 5px;
+}
+
+
+
+/* attendance Ends */
