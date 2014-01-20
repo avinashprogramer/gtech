@@ -40,6 +40,7 @@ $(document).ready(function() {
 		$(to_show).show();
 		if ( to_show == '#summary_graph') {
 			performance_chart();
+			$('#performance_graph').highcharts().yAxis[0].setExtremes(0, 100);
 		}
 		return false;
 	});
