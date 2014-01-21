@@ -39,9 +39,19 @@ $(document).ready(function() {
 		$('.subject_marks_Remarks_wrap').hide();
 		$(to_show).show();
 		if ( to_show == '#summary_graph') {
+			/*highchart call*/
 			performance_chart();
 			$('#performance_graph').highcharts().yAxis[0].setExtremes(0, 100);
 		}
+		return false;
+	});
+	$('.js-month_year_wrap > li > a').click(function(){
+		var to_show = $(this).attr('data-month-year');
+		$('.calander_list_wrap > .calander').removeClass('show');
+		$('.month_year_wrap > li').removeClass('active');
+		$(this).closest('li').addClass('active');
+		$('#'+to_show).addClass('show');
+		$('.js-calander_wrap > h5').html(to_show);
 		return false;
 	});
 });

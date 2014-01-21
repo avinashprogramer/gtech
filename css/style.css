@@ -261,6 +261,9 @@ body { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight:
     padding-right: 4%;
     text-align: right;
 }
+.ie7 .events_list_head > p.first, .ie7 .events_list > li > p.first {
+    padding-right: 3%;
+}
 .events_list {
     padding-top: 10px;
     padding-bottom: 50px;
@@ -457,6 +460,8 @@ body { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight:
     top: 50%;
     margin-top: -5px;
     right: 0px;
+    height: 0px;
+    width: 0px;
 }
 .subject_marks_Remarks_wrap {
     display: none;
@@ -509,6 +514,7 @@ body { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight:
     text-align: center;
     word-wrap: break-word;
     padding: 5px 0px;
+    text-decoration: blink;
 }
 .date_remark_wrap > p{
     color: #000000;
@@ -540,6 +546,131 @@ body { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight:
 }
 /* results Ends */
 /* attendance starts */
+.session_wrap {
+    text-align: left;
+}
+.session_wrap > h4 {
+    color: #000000;
+    font: 500 normal 20px/30px 'Josefin Sans', sans-serif;
+    background: #8D8789;
+    padding: 10px;
+    display: inline-block; 
+}
+.session_wrap > h4 > span {
+    background: #C5C5C5;
+    padding: 0px 10px;
+    margin-left: 5px;
+}
+.month_year_wrap {
+    width: 820px;
+    padding: 40px 0px 20px;
+}
+.month_year_wrap > li {
+    float: left;
+    width: 8.33%;
+    position: relative;
+}
+.month_year_wrap > li > a {
+    display: block;
+    padding: 0px 5px;
+    color: #000000;
+    font: 500 normal 20px/30px 'Josefin Sans', sans-serif;
+    text-align: center;
+    background: #7AA2F3;
+    opacity: 0.7;
+    filter:alpha(opacity=70);
+}
+.month_year_wrap > li.even > a {
+    background: #9758F3;
+}
+.month_year_wrap > li.active > a {
+    opacity: 1.0;
+    filter:alpha(opacity=100);
+}
+.month_year_wrap > li.active > span {
+    border-color: transparent transparent #3BA7F1 ;
+    border-style: solid;
+    border-width: 0px 5px 10px;
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    bottom: -10px;
+    height: 0px;
+    width: 0px;
+}
+.calander_wrap {
+    padding: 15px 15px 15px 100px;
+    background: #8D8789;
+}
+.calander_wrap > h5 {
+    color: #000000;
+    font: 700 normal 18px/24px 'Josefin Sans', sans-serif;
+    padding-bottom: 15px;
+    display: block;
+}
+.calander_list_wrap {
+    width: 225px;
+    padding: 0px;
+    height: 162px;
+    float: left;
+    overflow: hidden;
+}
+.calander {
+    width: 225px;
+    height: 162px;
+    display: none;
+}
+.calander.show {
+    display: block;
+}
+
+.calander > li {
+    float: left;
+    width: 28px;
+    height: 28px;
+    padding: 2px;
+}
+.calander > li > a {
+    display: block;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    color: #000000;
+    font: 300 normal 20px/28px 'Josefin Sans', sans-serif;
+    background: #ffffff;
+}
+.calander_legends {
+    float: right;
+    width: 250px;
+}
+.calander_legends > li {
+    display: block;
+    color: #000000;
+    font: 300 normal 20px/28px 'Josefin Sans', sans-serif;
+    padding-bottom: 5px;
+    text-align: left;
+}
+.calander_legends > li > span {
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin: 10px 10px 5px 5px;
+}
+.calander > li.select > a {
+    font-weight: 700;
+}
+.calander > li.attend > a, .calander_legends > li.attend > span {
+    background: #62DF51;
+}
+.calander > li.active > a, .calander_legends > li.active > span {
+    background: #32ACE9;
+}
+.calander > li.leave > a, .calander_legends > li.leave > span {
+    background: #F39516;
+}
+.calander > li.sunday > a, .calander > li.holiday > a, .calander_legends > li.holiday > span {
+    background: #CF77EC;
+}
 .leave_reason_wrap {
     padding: 20px 0px 0px;
 }
@@ -576,7 +707,5 @@ body { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight:
     display: block;
     padding-bottom: 5px;
 }
-
-
-
 /* attendance Ends */
+
