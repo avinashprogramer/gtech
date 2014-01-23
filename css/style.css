@@ -284,15 +284,56 @@ body { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight:
     padding: 20px 0px 50px;
 }
 .live_video_wrap {
-    background: url('../images/livevideo_placeholder.png') no-repeat center center transparent;
+    background: url('../images/livevideo_placeholder.png') no-repeat center 0px transparent;
     height: 461px;
     width: 820px;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 60px;
 }
 .live_video_wrap > .live_video_iframe {
     height: 461px;
     width: 820px;
     cursor: pointer; 
 }
+.live_video_wrap > .play_btn, .live_video_wrap > .stop_btn {
+    display: block;
+    background: #cccccc;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    opacity: .7;
+    filter:alpha(opacity=70);
+    z-index: 
+}
+.live_video_wrap > .play_btn:hover, .live_video_wrap > .stop_btn:hover {
+    opacity: 1;
+    filter:alpha(opacity=100);    
+}
+
+.live_video_wrap > .play_btn > span {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    border-color: transparent transparent transparent #32ACE9 ;
+    border-style: solid;
+    border-width: 12px 0px 12px 25px;
+    margin-top: -12px;
+}
+.live_video_wrap > .stop_btn {
+    left: 60px;
+}
+.live_video_wrap > .stop_btn > span {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    right: 8px;
+    bottom: 8px;
+    background: #32ACE9;
+}
+
 .livefeed_wrap > p {
     color: #000000;
     font: 700 normal 18px/24px 'Josefin Sans', sans-serif;
@@ -608,16 +649,26 @@ body { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight:
     padding-bottom: 15px;
     display: block;
 }
-.calander_list_wrap {
-    width: 225px;
-    padding: 0px;
-    height: 162px;
+.week_days {
+    padding: 5px 0px 10px;
+}
+.week_days > li {
+    text-align: center;
+    color: #000000;
+    font: 700 normal 20px/24px 'Josefin Sans', sans-serif;
+    width: 32px;
     float: left;
+}
+.calander_list_wrap {
+    float: left;
+    height: 194px;
     overflow: hidden;
+    padding: 0;
+    width: 225px;
 }
 .calander {
     width: 225px;
-    height: 162px;
+    height: 194px;
     display: none;
 }
 .calander.show {

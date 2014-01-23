@@ -54,8 +54,23 @@ $(document).ready(function() {
 		$('.js-calander_wrap > h5').html(to_show);
 		return false;
 	});
+
+	$('.live_video_wrap > .js-play_btn').click(function(){
+		var video_src = $(this).parent('.live_video_wrap').children('iframe').attr('data-src');
+		$(this).parent('.live_video_wrap').children('iframe').attr('src',video_src);
+		return false;
+	});
+	$('.live_video_wrap > .js-stop_btn').click(function(){
+		$(this).parent('.live_video_wrap').children('iframe').attr('src','');
+		return false;
+	});
+
 });
-	
+
+$(window).load(function(){
+	blank_li_calander('.js-month_year_wrap > li > a');
+});
+
 /*highcharts starts*/
 function performance_chart(){
 	$('#performance_graph').highcharts({
@@ -81,7 +96,7 @@ function performance_chart(){
 	        }]
 	    },
 	    tooltip: {
-	        valueSuffix: '%'
+	        valueSuffix: ''
 	    },
 	    legend: {
 	        layout: 'vertical',
@@ -91,16 +106,49 @@ function performance_chart(){
 	    },
 	    series: [{
 	        name: 'percentage',
-	        data: [7.0, 6.9, 9.5, 14.5, 99.8, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+	        data: [7.0, 6.9, 9.5, 14.5, 99.8, 46.5, 77.2, 26.5, 88.3, 18.3, 13.9, 9.6]
 	    }, {
 	        name: 'Rank',
-	        data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+	        data: [3, 4, 5, 38, 11, 15, 17, 56, 14, 10, 66, 48]
 	    }]
 	});
 }
 /*hicharts ends*/
 
+function blank_li_calander( elm ){
+	$(elm).each(function(){
+		var section_id = $(this).attr('data-month-year');
+		var year_month = section_id.split("-");
+		var date_parameter = year_month[0] + '1, ' + year_month[1];
+		var d = new Date(date_parameter);
+		add_sunday( '#'+section_id, year_month[1], year_month[0] )
+		for (var i=0; i< ((d.getDay() + 6)%7); i++){	// plus 6 for starting from monday
+			$('#'+section_id).prepend('<li></li>');
+		}
+
+	});
+}
+
+function add_sunday( elm, year, month ){
+	$(elm +'> li').each(function(){
+		$(this).removeClass('sunday');
+		var d = new Date(month + $(this).children('a').attr('data-date') + ", " + year);
+		//var flag = d.getDay();
+		if(d.getDay() == 0){
+			$(this).addClass('sunday');
+		}
+	});	
+}
 
 $(document).on('click', 'selector', function(){
     
 });
+
+/*$(document).ready(function() {
+	var date = "December 18, 1988";
+    var d = new Date(date);
+    var day_name = [['sun','mon','tue','wed','thur','fri','sat'],['mon','tue','wed','thur','fri','sat','sun'],'tuesday','wednesday','thursday','friday','saturday']
+    alert(day_name[d.getDay()]);
+  } );*/
+
+//var parts = html.split(":-");
