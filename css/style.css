@@ -294,7 +294,27 @@ body { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight:
 .live_video_wrap > .live_video_iframe {
     height: 461px;
     width: 820px;
-    cursor: pointer; 
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+}
+.live_video_wrap > .big_play_btn {
+    height: 242px;
+    left: 50%;
+    margin-left: -50px;
+    position: absolute;
+    top: 109px;
+    width: 100px;
+    z-index: 100;
+}
+.live_video_wrap > .big_play_btn > span {
+    left: 0;
+    margin-top: -121px;
+    position: absolute;
+    top: 50%;
+    border-color: transparent transparent transparent #202020 ;
+    border-style: solid;
+    border-width: 121px 0px 121px 100px;
 }
 .live_video_wrap > .play_btn, .live_video_wrap > .stop_btn {
     display: block;
@@ -306,7 +326,7 @@ body { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight:
     bottom: 10px;
     opacity: .7;
     filter:alpha(opacity=70);
-    z-index: 
+    z-index: 1;
 }
 .live_video_wrap > .play_btn:hover, .live_video_wrap > .stop_btn:hover {
     opacity: 1;
@@ -615,7 +635,7 @@ body { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight:
     display: block;
     padding: 0px 5px;
     color: #000000;
-    font: 500 normal 20px/30px 'Josefin Sans', sans-serif;
+    font: 700 normal 16px/30px 'Josefin Sans', sans-serif;
     text-align: center;
     background: #7AA2F3;
     opacity: 0.7;

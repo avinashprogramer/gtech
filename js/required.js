@@ -58,10 +58,12 @@ $(document).ready(function() {
 	$('.live_video_wrap > .js-play_btn').click(function(){
 		var video_src = $(this).parent('.live_video_wrap').children('iframe').attr('data-src');
 		$(this).parent('.live_video_wrap').children('iframe').attr('src',video_src);
+		//$('.js-play_btn').css('z-index','100');
 		return false;
 	});
 	$('.live_video_wrap > .js-stop_btn').click(function(){
 		$(this).parent('.live_video_wrap').children('iframe').attr('src','');
+		//$('.js-play_btn').css('z-index','10');
 		return false;
 	});
 
@@ -140,8 +142,25 @@ function add_sunday( elm, year, month ){
 	});	
 }
 
-$(document).on('click', 'selector', function(){
-    
+function get_month_num(month_name){
+	var months = [ "January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December" ];
+	for(var i=0;i < 12; i++){
+		if(months[i] == month_name){
+			return (i+1);
+		}
+	}
+}
+
+$(document).on('click', '.calander_list_wrap > .calander > li > a', function(){
+    $('.calander_list_wrap > .calander > li').removeClass('active');
+    $(this).closest('li').addClass('active');
+    var section_id = $('.js-month_year_wrap > li.active > a').attr('data-month-year');
+	var year_month = section_id.split("-");
+	var date_parameter = $(this).attr('data-date') +" "+ year_month[0] +", "+ year_month[1];
+	$('.js-selected_date').html(date_parameter);
+	var input_val = $(this).attr('data-date') +"/"+ get_month_num(year_month[0]) +"/"+ year_month[1];
+	$('.js-date_selected').val(input_val);
+	return false;
 });
 
 /*$(document).ready(function() {
