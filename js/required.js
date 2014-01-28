@@ -121,14 +121,19 @@ function blank_li_calander( elm ){
 	$(elm).each(function(){
 		var section_id = $(this).attr('data-month-year');
 		var year_month = section_id.split("-");
-		var date_parameter = year_month[0] + '1, ' + year_month[1];
-		var d = new Date(date_parameter);
+		var date_parameter = year_month[0] + ' 1, ' + year_month[1];
+		//var d = new Date(date_parameter);
 		add_sunday( '#'+section_id, year_month[1], year_month[0] )
-		for (var i=0; i< ((d.getDay() + 6)%7); i++){	// plus 6 for starting from monday
+		var no_of_li = day_number(date_parameter);
+		for (var i=0; i< ((no_of_li + 6)%7); i++){	// plus 6 for starting from monday
 			$('#'+section_id).prepend('<li></li>');
 		}
-
 	});
+}
+
+function day_number(date_string){
+	var d = new Date(date_string);
+	return d.getDay();
 }
 
 function add_sunday( elm, year, month ){

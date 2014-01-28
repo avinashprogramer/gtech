@@ -90,7 +90,7 @@ body { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight:
     -webkit-box-shadow: 0 14px 5px -15px #000000 inset;
     position: relative;
     text-align: center;
-    height: 70px;
+    height: 84px;
 }
 .main_menu_wrap > a.menu_toggle {
     background: url('../images/menu_toggle_img.png') no-repeat 0px -6px transparent;
@@ -120,7 +120,14 @@ body { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight:
 .main_menu > li > a {
     color: #F4F4F4;
     font: 300 normal 18px/24px 'Josefin Sans', sans-serif;
-    display: inline-block;
+    display: block;
+    padding: 5px;
+    border: 2px solid #ffffff;
+    box-shadow: 3px 3px #ffffff;
+}
+.main_menu > li > a:hover {
+    margin: 3px -3px -3px 3px;
+    box-shadow: 0px 0px #ffffff;
 }
 .open .main_menu > li.active > span {
     border-color: transparent transparent #E5E5E5;

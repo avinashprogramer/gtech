@@ -1,0 +1,142 @@
+* { margin:0; padding:0; }
+html { /*background:#fff;*/ background: url("../images/back_texture.png") repeat 0px 0px transparent; }
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { display:block; }
+a { border:none; color:#D87512; outline:none; text-decoration:none; } a:hover { color:#F7941E; }
+img { border:none; }
+ul, ol, li { list-style-type: none; }
+input, select { outline:none; }
+input::-moz-focus-inner{border:none;}
+input::-webkit-focus-inner{border:none;}
+input::-o-focus-inner{border:none;}
+textarea { resize:none; outline:none; }
+.clear { clear:both; }
+.clearfix:after {clear:both;content:".";display:block;height:0;visibility:hidden;}
+.clearfix {display:inline-block;}
+* html .clearfix {height:1%;}
+.clearfix {display:block;}
+.wf100 { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight: 100; }
+.wf300 { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight: 300; }
+.wf300i { font-family: 'Josefin Sans', sans-serif; font-style: italic; font-weight: 300; }
+.wf500 { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight: 500; }
+.wf700 { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight: 700; }
+strong, b, h1, h2, h3, h4, h5, h6 { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight: 500; }
+em, i { font-family: 'Josefin Sans', sans-serif; font-style: italic; font-weight: 300; }
+
+body { font-family: 'Josefin Sans', sans-serif; font-style: normal; font-weight: 300; font-size:15px; line-height: 19px; color:#fff; }
+.aligner { width:940px; margin:0 auto; padding:0px;}
+.global { width:100%; background:transparent; }
+.header {
+    
+}
+.footer {
+   
+}
+.footer_aligner {
+    text-align: center;
+}
+.footer_sponser {
+    
+}
+body {
+    background: url("../images/back_texture.png") repeat 0px 0px transparent;
+}
+.main {
+    /*background: #3FBDFF;*/
+    /*padding-bottom: 9999px;*/
+}
+.aligner {
+    height: 580px;
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    color: #761919;
+}
+.aligner > h1 {
+    padding: 60px 20px 0px;
+    font: normal normal 43px/49px 'sakkal majalla', sans-serif;
+}
+.aligner > h2 {
+    padding: 20px 20px 0px;
+    font: bold normal 70px/80px 'sakkal majalla', sans-serif;
+}
+.aligner > h3 {
+    padding: 10px 20px 0px;
+    font: normal normal 43px/49px 'Rage', sans-serif;
+}
+.aligner > h5 {
+    padding: 150px 10px 0px 200px;
+    font: normal normal 43px/49px 'Rage', sans-serif;
+    text-align: left;
+}
+.aligner > img {
+    width: 455px;
+    height: 255px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+@media (max-width: 959px) and (min-width: 640px) {
+    .aligner {
+        width: 640px;
+        text-align: center;
+    }
+    .aligner > h5 {
+        padding-bottom: 30px;
+    }
+    .aligner > img {
+        position: static;
+        width: 300px;
+        height: 180px;
+        display: inline-block;
+        margin-left: -40px
+    }
+}
+@media (max-width: 639px) and (min-width: 480px) {
+    
+    .main {
+        height: 650px;
+    }
+    .aligner {
+        width: 480px;
+        text-align: center;
+        height: 650px;
+    }
+    .aligner > h5 {
+        padding: 150px 0px 30px;
+        margin: 0px;
+        text-align: center;
+    }
+    .aligner > img {
+        position: static;
+        width: 250px;
+        height: 140px;
+        display: inline-block;
+        margin-left: -40px
+    }
+}
+@media (max-width: 479px) and (min-width: 320px) {
+    
+    .main {
+        height: 650px;
+    }
+    .aligner {
+        width: 320px;
+        text-align: center;
+        height: 650px;
+    }
+    .aligner > h5 {
+        padding: 100px 0px 30px;
+        margin: 0px;
+        text-align: center;
+    }
+    .aligner > img {
+        position: static;
+        width: 200px;
+        height: 100px;
+        display: inline-block;
+        margin-left: -40px
+    }
+}
